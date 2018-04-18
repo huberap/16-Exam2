@@ -2,8 +2,8 @@
 Exam 2, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  April 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Alex Huber.  April 2018.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -18,12 +18,12 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem4a()
-    # run_test_problem4b()
+    run_test_problem4a()
+    run_test_problem4b()
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   is_prime   function below.
+# done: 2.  READ the doc-string for the   is_prime   function below.
 #           It is the same  is_prime  function that you have used previously,
 #           except that it returns  False  for all integers less than 2.
 #
@@ -153,10 +153,15 @@ def problem4a(strings):
       :type [str]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # done: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
+    for k in range(len(strings)):
+
+        if is_prime(len(strings[k])):
+            return strings[k]
+    return -1
 
 def run_test_problem4b():
     """ Tests the   problem4b   function. """
@@ -221,6 +226,15 @@ def run_test_problem4b():
 #                    AND HAS AN ELEGANT SOLUTION.  DO NOT GET STUCK ON IT!
 # -----------------------------------------------------------------------------
 def problem4b(list_of_tuples_of_strings):
+    for k in range(len(list_of_tuples_of_strings)):
+
+        for l in range((len(list_of_tuples_of_strings[k]))):
+
+            if is_prime(len((list_of_tuples_of_strings[k][l]))):
+                return True
+    return False
+
+
     """
     What comes in:  A list of tuples of strings.
     What goes out:
